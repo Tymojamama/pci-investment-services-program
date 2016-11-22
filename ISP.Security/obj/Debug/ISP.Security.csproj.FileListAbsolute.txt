@@ -1,0 +1,11 @@
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Security\bin\Debug\ISP.Security.dll
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Security\bin\Debug\ISP.Security.pdb
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Security\bin\Debug\DataIntegrationHub.Business.dll
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Security\bin\Debug\PensionConsultants.Data.dll
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Security\bin\Debug\DataIntegrationHub.Business.pdb
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Security\bin\Debug\PensionConsultants.Data.pdb
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Security\obj\Debug\ISP.Security.dll
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Security\obj\Debug\ISP.Security.pdb
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Security\obj\Debug\ISP.Security.csprojResolveAssemblyReference.cache
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Security\bin\Debug\ISP.Business.dll
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Security\bin\Debug\ISP.Business.pdb

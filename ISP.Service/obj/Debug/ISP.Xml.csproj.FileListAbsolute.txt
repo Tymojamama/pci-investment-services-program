@@ -1,0 +1,9 @@
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Service\bin\Debug\ISP.Service.dll
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Service\bin\Debug\ISP.Service.pdb
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Service\bin\Debug\PensionConsultants.Data.dll
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Service\bin\Debug\PensionConsultants.Data.pdb
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Service\obj\Debug\ISP.Xml.csprojResolveAssemblyReference.cache
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Service\obj\Debug\ISP.Service.dll
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Service\obj\Debug\ISP.Service.pdb
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Service\bin\Debug\ISP.Business.dll
+C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Service\bin\Debug\ISP.Business.pdb

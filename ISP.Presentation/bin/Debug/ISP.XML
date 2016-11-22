@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ISP</name>
+    </assembly>
+    <members>
+        <member name="F:ISP.Presentation.Forms.frmSelectRecord.SelectedRecordId">
+            <summary>
+            The Guid of the selected record on the form.
+            </summary>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmSelectRecord.RecordSelected">
+            <summary>
+            Occurs when a record has been selected on the form.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmSelectRecord.#ctor(ISP.Presentation.Forms.frmMain,ISP.Presentation.Forms.frmSelectRecord.RecordType,System.Object,System.Data.DataTable)">
+            <summary>
+            Displays a form for selecting a particular record from a datatable.
+            </summary>
+            <param name="frmMain"></param>
+            <param name="selectRecordType"></param>
+            <param name="orignalRecordName"></param>
+            <param name="dataTableToSearch"></param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmSelectRecord.CloseForm">
+            <summary>
+            Closes the form and frees any memory that was required of the form.
+            </summary>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmSelectRecord.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmSelectRecord.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmSelectRecord.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ISP.Forms.Controls.Clients.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ISP.Forms.Controls.Clients.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ISP.Forms.Controls.Clients.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ISP.Forms.Controls.Settings.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ISP.Forms.Controls.Settings.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ISP.Forms.Controls.Settings.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmManager.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmManager.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmManager.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmMergeFunds.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMergeFunds.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMergeFunds.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmNewFund.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmNewFund.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmNewFund.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmProbationAnalysis.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmProbationAnalysis.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmProbationAnalysis.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ISP.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ISP.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ISP.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ISP.Properties.Resources.advisors">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ISP.Properties.Resources.arrowDown">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ISP.Properties.Resources.arrowUp">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ISP.Properties.Resources.customers">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ISP.Properties.Resources.lightbulb">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ISP.Properties.Resources.managers">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ISP.Properties.Resources.plus">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ISP.Properties.Resources.save">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ISP.Properties.Resources.x">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmAdvisor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmAdvisor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmAdvisor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmAccount.UnsavedChangesIps">
+            <summary>
+            Indicates whether the IPS Monitoring Criteria section of the form has any unsaved changes.
+            </summary>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmAccount.UnsavedChangesFund">
+            <summary>
+            Indicates whether the Selected Fund section of the form has any unsaved changes.
+            </summary>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmAccount.CancelSelectedPlanCboIndexChanged">
+            <summary>
+            Indicates whether the typical behaviour associated with the event SelectedIndexChanged in <see cref="F:ISP.Presentation.Forms.frmAccount.cboSelectedPlan"/>
+            should be ignored.
+            </summary>
+            <remarks>
+            This is a member used for reverting behaviour on the form.
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:ISP.Presentation.Forms.frmAccount.CancelSelectedPlanFundCboIndexChanged" -->
+        <!-- Badly formed XML comment ignored for member "F:ISP.Presentation.Forms.frmAccount.CancelFundsDgvCellEnter" -->
+        <member name="M:ISP.Presentation.Forms.frmAccount.PreFilterMessage(System.Windows.Forms.Message@)">
+            <summary>
+            Filters out a message before it is dispatched.
+            </summary>
+            <param name="m">The message to be dispatched. You cannot modify this message.</param>
+            <returns>
+            true to filter the message and stop it from being dispatched; false to allow the message to continue to the next filter or control.
+            </returns>
+            <remarks>
+            Use <see cref="M:ISP.Presentation.Forms.frmAccount.PreFilterMessage(System.Windows.Forms.Message@)"/> to filter out a message before it is dispatched to a control or form.
+            For example, to stop the Click event of a Button control from being dispatched to the control, you implement
+            the <see cref="M:ISP.Presentation.Forms.frmAccount.PreFilterMessage(System.Windows.Forms.Message@)"/> method and return a true value when the Click message occurs. You can
+            also use this method to perform code work that you might need to do before the message is dispatched.
+            </remarks>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmAccount.RevertDgvFundCellFocus">
+            <summary>
+            Reverts the current cell in <see cref="F:ISP.Presentation.Forms.frmAccount.dgvFunds"/> to the previously selected current cell without invoking the
+            usual behaviour associated with it's CellEnter event.
+            </summary>
+        </member>
+        <member name="T:ISP.Presentation.Forms.frmTask">
+            <summary>
+            Represents a Windows Forms UI used for interacting with Task database data.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmTask.PreFilterMessage(System.Windows.Forms.Message@)">
+            <summary>
+            Filters out a message before it is dispatched.
+            </summary>
+            <param name="m">The message to be dispatched. You cannot modify this message.</param>
+            <returns>
+            true to filter the message and stop it from being dispatched; false to allow the
+            message to continue to the next filter or control.
+            </returns>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmTask.CurrentTask">
+            <summary>
+            Represents the underlying <see cref="T:ISP.Business.Entities.DatabaseEntity"/> that the form is modeling.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmTask.#ctor(ISP.Presentation.Forms.frmMain)">
+            <summary>
+            Instantiates a Task form of a new <see cref="T:ISP.Business.Entities.Task"/> to be created.
+            </summary>
+            <param name="_frmMain"></param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmTask.#ctor(ISP.Presentation.Forms.frmMain,ISP.Business.Entities.Task)">
+            <summary>
+            Instantiates a Task form representing an existing <see cref="T:ISP.Business.Entities.Task"/> in the database.
+            </summary>
+            <param name="_frmMain"></param>
+            <param name="task"></param>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmTask.components">
+            <summary>
+            Designer variable used to keep track of non-visual components.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmTask.Dispose(System.Boolean)">
+            <summary>
+            Disposes resources used by the form.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmTask.InitializeComponent">
+            <summary>
+            This method is required for Windows Forms designer support.
+            Do not change the method contents inside the source code editor. The Forms designer might
+            not be able to load this method if it was changed manually.
+            </summary>
+        </member>
+        <member name="P:ISP.Presentation.Forms.frmTask.IsFillingComponents">
+            <summary>
+            Identifies if the form is in the process of initialing setting fields.
+            </summary>
+            <remarks>
+            This is to ensure that events like SelectedIndexChanged don't overwrite data
+            that was supposed to have been set when constructing the form.
+            </remarks>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmFund.UpdateLayoutAfterDelay(System.Windows.Forms.Control)">
+            <summary>
+            Updates the layout of the specified control after a delay of 100 milliseconds. Will reset if the method is called before
+            it reaches 100 milliseconds.
+            </summary>
+            <param name="control">Used to resume the layout after the delay.</param>
+            <remarks>
+            Took me forever to figure out! I needed to update the control with a delay so that the control would scroll
+            smoothly with <see cref="F:ISP.Presentation.Forms.frmFund.vScrollBar1"/>. Panels try to add and immediately remove the scroll bar when the vertical
+            scrollbar value is changed, which makes it not scroll smoothly. This delays it long enough to not see this shutter.
+            </remarks>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmFund._updatePanelTimer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Resumes the layout of <see cref="F:ISP.Presentation.Forms.frmFund.pnlSummaryBody"/> on tick.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.#ctor">
+            <summary>
+            Represents the main form of the ISP application.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.SetDefaultComboBoxValues">
+            <summary>
+            Sets the default values for all ComboBoxes within the ISP.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.HandleAppVersion">
+            <summary>
+            Checks the version of the application and sets <see cref="F:ISP.Presentation.Forms.frmMain.lblFormHeader"/>.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.DrawTaskNotification(System.Int32)">
+            <summary>
+            Sets <see cref="F:ISP.Presentation.Forms.frmMain.lblOpenTasks"/> with the number of open tasks and draws an elipse around the number.
+            </summary>
+            <param name="num">The number of open tasks.</param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.LoginCurrentUser">
+            <summary>
+            Gets the security status of the current user and enables features based on their status.
+            </summary>
+            <returns>true if the current user has sufficient permission to use the application.</returns>
+            <remarks>
+            This method uses the <see cref="M:ISP.Security.SecurityComponent.#ctor(DataIntegrationHub.Business.Entities.User)"/> to grab security roles from the
+            Data Integration Hub on PCI-DB. It closes frmMain if an error occurs.
+            </remarks>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.frmError_FormClosedEventHandler(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            Closes <see cref="T:ISP.Presentation.Forms.frmMain"/> when <see cref="T:ISP.Presentation.Forms.frmError"/> is closed.
+            </summary>
+            <param name="sender">Provides a reference to the frmError sender instance.</param>
+            <param name="e">Provides data for the System.Windows.Forms.Form.FormClosed event.</param>
+            <remarks>
+            This should only be used when the thrown exception would prevent the user from using the application.
+            For example, if the application could not connect to the database or if the current user could
+            not be logged in, then the form should be closed because it would be unusable.
+            </remarks>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.LoadAutoCompleteAdvisors">
+            <summary>
+            Clears and adds string values to the AutoCompleteCustomSource of <see cref="F:ISP.Presentation.Forms.frmMain.txtAdvisorSearch"/>.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.LoadAutoCompleteFunds">
+            <summary>
+            Clears and adds string values to the AutoCompleteCustomSource of <see cref="F:ISP.Presentation.Forms.frmMain.txtFundsSearch"/>.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.FundSearch(System.String)">
+            <summary>
+            Searches the database for matching records.
+            </summary>
+            <param name="searchValue">Used to find matching records.</param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.ConnectionSucceeded">
+            <summary>
+            Checks if the application can connect to the relevant databases and servers.
+            </summary>
+            <returns>Returns true if the connection did succeed.</returns>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.OpenSelectedFundForm">
+            <summary>
+            Creates a new instance of <see cref="T:ISP.Presentation.Forms.frmFund"/> using the current row index of <see cref="F:ISP.Presentation.Forms.frmMain.dgvFunds"/>.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.LoadTasksDgv">
+            <summary>
+            Sets <see cref="F:ISP.Presentation.Forms.frmMain.dgvTasks"/> based on the SelectedIndex of <see cref="F:ISP.Presentation.Forms.frmMain.cboTaskViews"/>.
+            </summary>
+            <remarks>
+            Since we aren't storing users in the ISP database, we must use the
+            DataIntegrationHub.Business API to match the Guid values of <see cref="F:ISP.Presentation.Forms.frmMain.dgvTasks"/>
+            </remarks>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.LoadTasksControls">
+            <summary>
+            Enables, disables and sets values of task-related controls based on their intrinsic availability.
+            </summary>
+            <remarks>
+            We have this because we don't want users to attempt to do intrinsically irrational actions.
+            For example, if CurrentCell is null and no record is selected, we don't want users to be able
+            to click on a button that allows the user to edit that record.
+            </remarks>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.LoadManagersDgv">
+            <summary>
+            Loads <see cref="F:ISP.Presentation.Forms.frmMain.dgvManagers"/> based on the selected item in <see cref="F:ISP.Presentation.Forms.frmMain.cboManagerViews"/>.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.HandleDashboardTasks">
+            <summary>
+            Loads <see cref="F:ISP.Presentation.Forms.frmMain.dgvDshTasks"/> and sets <see cref="F:ISP.Presentation.Forms.frmMain.lblDashboardOpenTasks"/> based on open tasks.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.LoadMissingValuesDgv">
+            <summary>
+            Gets all missing records related to value in <see cref="F:ISP.Presentation.Forms.frmMain.cboMissingViews"/> and loads <see cref="F:ISP.Presentation.Forms.frmMain.dgvMissingValues"/> with records.
+            </summary>
+            <remarks>
+            Utilizes background worker to get data from database since it takes a while.
+            </remarks>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.CalculateLoadingAnimation(System.Windows.Forms.Label)">
+            <summary>
+            Recursively sets the text of a control with the text "Loading".
+            </summary>
+            <param name="label">Used to get and set loading text.</param>
+            <remarks>
+            Will automatically set the text of the control to "Loading" if
+            it does not already start with "Loading".
+            </remarks>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmMain.LoadDuplicateRecordsDgv">
+            <summary>
+            Gets all duplicate records related to value in <see cref="F:ISP.Presentation.Forms.frmMain.cboDuplicateViews"/> and loads <see cref="F:ISP.Presentation.Forms.frmMain.dgvDuplicateRecords"/> with records.
+            </summary>
+        </member>
+        <member name="T:ISP.Presentation.Utilities.Pagination">
+            <summary>
+            This class is used to manage the sorting, paging forward, and paging backward of a DataGridView by loading the DataTable into memory and selecting rows with Linq.
+            </summary>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmError.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmError.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmError.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmSplashScreen.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmSplashScreen.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmSplashScreen.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ISP.Presentation.Forms.frmTaskTime">
+            <summary>
+            Represents a Windows Forms UI used for interacting with TaskTime database data.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmTaskTime.#ctor(ISP.Presentation.Forms.frmMain,System.Guid,System.Guid)">
+            <summary>
+            Creates an instance of a Task Time form in order to edit the TaskTime.
+            </summary>
+            <param name="_frmMain"></param>
+            <param name="_taskId"></param>
+            <param name="_taskTimeId"></param>
+            <param name="_formClosed"></param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmTaskTime.#ctor(ISP.Presentation.Forms.frmMain,System.Guid)">
+            <summary>
+            Creates an instance of a Task Time form in order to insert new entries against the selected Task.
+            </summary>
+            <param name="_frmMain"></param>
+            <param name="_taskId"></param>
+        </member>
+        <member name="F:ISP.Presentation.Forms.frmTaskTime.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmTaskTime.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ISP.Presentation.Forms.frmTaskTime.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>
