@@ -221,10 +221,14 @@ namespace ISP.Presentation.Forms
             dgvPlans.Columns["PlanType"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvPlans.Columns["AssetValue"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dgvPlans.Columns["Account"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvPlans.Columns["DateAdded"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvPlans.Columns["DateRemoved"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             dgvPlans.Columns["PlanName"].HeaderText = "Plan Name";
             dgvPlans.Columns["PlanType"].HeaderText = "Plan Type";
             dgvPlans.Columns["AssetValue"].HeaderText = "Asset Value";
+            dgvPlans.Columns["DateAdded"].HeaderText = "Date Added";
+            dgvPlans.Columns["DateRemoved"].HeaderText = "Date Removed";
 
             dgvPlans.Columns["AssetValue"].DefaultCellStyle.Format = "C2";
         }
