@@ -2427,7 +2427,19 @@ namespace ISP.Presentation.Forms
         {
             tabControlSettings.SelectedTab = tabControlSettings.TabPages["tabPageUsers"];
             LoadCboSecurityRole();
+            LoadCboSecurityUsers();
             LoadUserSettings();
+        }
+
+        private void LoadCboSecurityUsers()
+        {
+            cboSettingsUsers.Items.Clear();
+
+            foreach (var user in DataIntegrationHub.Business.Entities.User.ActiveUsers())
+            {
+                ListItem listItem = new ListItem(user.FullName, user);
+                cboSettingsUsers.Items.Add(listItem);
+            }
         }
 
         private void LoadCboSecurityRole()
@@ -2479,6 +2491,23 @@ namespace ISP.Presentation.Forms
             LoadUserSecurityRole();
         }
 
+        private void SelectCboSettingUser(DataIntegrationHub.Business.Entities.User user)
+        {
+            foreach (ListItem item in cboSettingsUsers.Items)
+            {
+                if (item.HiddenObject is DataIntegrationHub.Business.Entities.User)
+                {
+                    Guid itemId = ((DataIntegrationHub.Business.Entities.User)item.HiddenObject).UserId;
+
+                    if (itemId == user.UserId)
+                    {
+                        cboSettingsUsers.SelectedItem = item;
+                        return;
+                    }
+                }
+            }
+        }
+
         private void SelectCboSecurityRole(ISP.Business.Entities.SecurityRole securityRole)
         {
             foreach (ListItem item in cboSecurityRole.Items)
@@ -2503,12 +2532,17 @@ namespace ISP.Presentation.Forms
             
             ISP.Business.Entities.SecurityRole securityRole = new ISP.Business.Entities.SecurityRole(CurrentUserSecurityRole.SecurityRoleId);
             SelectCboSecurityRole(securityRole);
+            SelectCboSettingUser(user);
         }
 
         private void btnSaveUserSecurity_Click(object sender, EventArgs e)
         {
+            var user = (DataIntegrationHub.Business.Entities.User)((ListItem)cboSettingsUsers.SelectedItem).HiddenObject;
+            var securityRole = (ISP.Business.Entities.SecurityRole)((ListItem)cboSecurityRole.SelectedItem).HiddenObject;
+
             ListItem item = (ListItem)cboSecurityRole.SelectedItem;
-            CurrentUserSecurityRole.SecurityRoleId = ((ISP.Business.Entities.SecurityRole)item.HiddenObject).Id;
+            CurrentUserSecurityRole.UserId = user.UserId;
+            CurrentUserSecurityRole.SecurityRoleId = securityRole.Id;
             CurrentUserSecurityRole.SaveRecordToDatabase(CurrentUser.UserId);
 
             ISP.Business.Entities.UserSecurityRole savedUserSecurityRole = CurrentUserSecurityRole;
@@ -2544,7 +2578,19 @@ namespace ISP.Presentation.Forms
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
+            var user = (DataIntegrationHub.Business.Entities.User)((ListItem)cboSettingsUsers.SelectedItem).HiddenObject;
+            var securityRole = (ISP.Business.Entities.SecurityRole)((ListItem)cboSecurityRole.SelectedItem).HiddenObject;
 
+            var userSecurityRole = new ISP.Business.Entities.UserSecurityRole();
+            userSecurityRole.UserId = user.UserId;
+            userSecurityRole.SecurityRoleId = securityRole.Id;
+            userSecurityRole.SaveRecordToDatabase(CurrentUser.UserId);
+
+            CurrentUserSecurityRole = userSecurityRole;
+
+            LoadDgvUserSecurity();
+            SelectDgvUserSecurityRole(userSecurityRole);
+            lblUserSecuritySaved.Visible = true;
         }
 
         private void btnDgvTasksForward_Click(object sender, EventArgs e)

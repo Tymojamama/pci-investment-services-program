@@ -42,7 +42,6 @@
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabClients = new System.Windows.Forms.TabPage();
             this.pnlClientsContainer = new System.Windows.Forms.Panel();
-            this.ucClients = new ISP.Forms.Controls.Clients();
             this.pnlClntHeader = new System.Windows.Forms.Panel();
             this.lblClientsHeader = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -222,7 +221,6 @@
             this.tabPageStringMap = new System.Windows.Forms.TabPage();
             this.panel32 = new System.Windows.Forms.Panel();
             this.label90 = new System.Windows.Forms.Label();
-            this.ucSettings = new ISP.Forms.Controls.Settings();
             this.tabPageAssetGroups = new System.Windows.Forms.TabPage();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -231,7 +229,6 @@
             this.lblCategory = new System.Windows.Forms.Label();
             this.lblRecordSaved = new System.Windows.Forms.Label();
             this.lblSelectedCategory = new System.Windows.Forms.Label();
-            this.btnSaveAssetGroup = new System.Windows.Forms.Button();
             this.cboAssetGroup = new System.Windows.Forms.ComboBox();
             this.lblAssetGroup = new System.Windows.Forms.Label();
             this.dgvCategories = new System.Windows.Forms.DataGridView();
@@ -241,13 +238,10 @@
             this.panel22 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
-            this.btnAddUser = new System.Windows.Forms.Button();
-            this.btnRemoveUser = new System.Windows.Forms.Button();
             this.lblSelectedUser = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblUserSecuritySaved = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnSaveUserSecurity = new System.Windows.Forms.Button();
             this.cboSecurityRole = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.dgvUserSecurity = new System.Windows.Forms.DataGridView();
@@ -264,13 +258,10 @@
             this.tabAccounts = new System.Windows.Forms.TabPage();
             this.panel39 = new System.Windows.Forms.Panel();
             this.pnlAccClient = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label103 = new System.Windows.Forms.Label();
             this.pnlAccAdv = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label101 = new System.Windows.Forms.Label();
             this.pnlAccMgr = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label102 = new System.Windows.Forms.Label();
             this.panel42 = new System.Windows.Forms.Panel();
             this.label104 = new System.Windows.Forms.Label();
@@ -294,6 +285,16 @@
             this.lblFormHeader = new System.Windows.Forms.Label();
             this.tmrTaskNotification = new System.Windows.Forms.Timer(this.components);
             this.toolTipMainForm = new System.Windows.Forms.ToolTip(this.components);
+            this.btnSaveAssetGroup = new System.Windows.Forms.Button();
+            this.btnAddUser = new System.Windows.Forms.Button();
+            this.btnRemoveUser = new System.Windows.Forms.Button();
+            this.btnSaveUserSecurity = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cboSettingsUsers = new System.Windows.Forms.ComboBox();
+            this.ucClients = new ISP.Forms.Controls.Clients();
+            this.ucSettings = new ISP.Forms.Controls.Settings();
             this.tabMain.SuspendLayout();
             this.tabClients.SuspendLayout();
             this.pnlClientsContainer.SuspendLayout();
@@ -366,15 +367,15 @@
             this.tabAccounts.SuspendLayout();
             this.panel39.SuspendLayout();
             this.pnlAccClient.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnlAccAdv.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlAccMgr.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel42.SuspendLayout();
             this.pnlAppStatus.SuspendLayout();
             this.pnlMainMnu.SuspendLayout();
             this.pnlMainHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabMain
@@ -426,14 +427,6 @@
             this.pnlClientsContainer.Name = "pnlClientsContainer";
             this.pnlClientsContainer.Size = new System.Drawing.Size(1058, 439);
             this.pnlClientsContainer.TabIndex = 27;
-            // 
-            // ucClients
-            // 
-            this.ucClients.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucClients.Location = new System.Drawing.Point(0, 0);
-            this.ucClients.Name = "ucClients";
-            this.ucClients.Size = new System.Drawing.Size(1058, 439);
-            this.ucClients.TabIndex = 26;
             // 
             // pnlClntHeader
             // 
@@ -3016,8 +3009,8 @@
             // tabSettings
             // 
             this.tabSettings.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabSettings.Controls.Add(this.panel24);
             this.tabSettings.Controls.Add(this.panel10);
+            this.tabSettings.Controls.Add(this.panel24);
             this.tabSettings.Controls.Add(this.tabControlSettings);
             this.tabSettings.Location = new System.Drawing.Point(4, 25);
             this.tabSettings.Margin = new System.Windows.Forms.Padding(2);
@@ -3160,16 +3153,6 @@
             this.label90.TabIndex = 3;
             this.label90.Text = "String Map Settings";
             // 
-            // ucSettings
-            // 
-            this.ucSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucSettings.Location = new System.Drawing.Point(1, 33);
-            this.ucSettings.Name = "ucSettings";
-            this.ucSettings.Size = new System.Drawing.Size(1058, 408);
-            this.ucSettings.TabIndex = 30;
-            // 
             // tabPageAssetGroups
             // 
             this.tabPageAssetGroups.Controls.Add(this.panel18);
@@ -3274,24 +3257,6 @@
             this.lblSelectedCategory.Size = new System.Drawing.Size(166, 21);
             this.lblSelectedCategory.TabIndex = 87;
             this.lblSelectedCategory.Text = "Selected Category";
-            // 
-            // btnSaveAssetGroup
-            // 
-            this.btnSaveAssetGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveAssetGroup.BackColor = System.Drawing.Color.Transparent;
-            this.btnSaveAssetGroup.BackgroundImage = global::ISP.Properties.Resources.save;
-            this.btnSaveAssetGroup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSaveAssetGroup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveAssetGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveAssetGroup.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveAssetGroup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(218)))), ((int)(((byte)(219)))));
-            this.btnSaveAssetGroup.Location = new System.Drawing.Point(1020, 7);
-            this.btnSaveAssetGroup.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSaveAssetGroup.Name = "btnSaveAssetGroup";
-            this.btnSaveAssetGroup.Size = new System.Drawing.Size(26, 26);
-            this.btnSaveAssetGroup.TabIndex = 86;
-            this.btnSaveAssetGroup.UseVisualStyleBackColor = false;
-            this.btnSaveAssetGroup.Click += new System.EventHandler(this.btnSaveAssetGroup_Click);
             // 
             // cboAssetGroup
             // 
@@ -3430,6 +3395,7 @@
             // 
             this.panel25.BackColor = System.Drawing.Color.Gainsboro;
             this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel25.Controls.Add(this.cboSettingsUsers);
             this.panel25.Controls.Add(this.btnAddUser);
             this.panel25.Controls.Add(this.btnRemoveUser);
             this.panel25.Controls.Add(this.lblSelectedUser);
@@ -3446,42 +3412,6 @@
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(1058, 407);
             this.panel25.TabIndex = 33;
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddUser.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddUser.BackgroundImage = global::ISP.Properties.Resources.plus;
-            this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddUser.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(218)))), ((int)(((byte)(219)))));
-            this.btnAddUser.Location = new System.Drawing.Point(562, 13);
-            this.btnAddUser.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(20, 20);
-            this.btnAddUser.TabIndex = 94;
-            this.btnAddUser.UseVisualStyleBackColor = false;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
-            // btnRemoveUser
-            // 
-            this.btnRemoveUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoveUser.BackColor = System.Drawing.Color.Transparent;
-            this.btnRemoveUser.BackgroundImage = global::ISP.Properties.Resources.x;
-            this.btnRemoveUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRemoveUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemoveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveUser.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(218)))), ((int)(((byte)(219)))));
-            this.btnRemoveUser.Location = new System.Drawing.Point(587, 13);
-            this.btnRemoveUser.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRemoveUser.Name = "btnRemoveUser";
-            this.btnRemoveUser.Size = new System.Drawing.Size(20, 20);
-            this.btnRemoveUser.TabIndex = 95;
-            this.btnRemoveUser.UseVisualStyleBackColor = false;
-            this.btnRemoveUser.Click += new System.EventHandler(this.btnRemoveUser_Click);
             // 
             // lblSelectedUser
             // 
@@ -3501,7 +3431,7 @@
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Arial", 9F);
-            this.label12.Location = new System.Drawing.Point(639, 37);
+            this.label12.Location = new System.Drawing.Point(639, 61);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(157, 18);
@@ -3533,24 +3463,6 @@
             this.label14.TabIndex = 87;
             this.label14.Text = "Selected User";
             // 
-            // btnSaveUserSecurity
-            // 
-            this.btnSaveUserSecurity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveUserSecurity.BackColor = System.Drawing.Color.Transparent;
-            this.btnSaveUserSecurity.BackgroundImage = global::ISP.Properties.Resources.save;
-            this.btnSaveUserSecurity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSaveUserSecurity.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveUserSecurity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveUserSecurity.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveUserSecurity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(218)))), ((int)(((byte)(219)))));
-            this.btnSaveUserSecurity.Location = new System.Drawing.Point(1020, 7);
-            this.btnSaveUserSecurity.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSaveUserSecurity.Name = "btnSaveUserSecurity";
-            this.btnSaveUserSecurity.Size = new System.Drawing.Size(26, 26);
-            this.btnSaveUserSecurity.TabIndex = 86;
-            this.btnSaveUserSecurity.UseVisualStyleBackColor = false;
-            this.btnSaveUserSecurity.Click += new System.EventHandler(this.btnSaveUserSecurity_Click);
-            // 
             // cboSecurityRole
             // 
             this.cboSecurityRole.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -3562,7 +3474,7 @@
             this.cboSecurityRole.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.cboSecurityRole.Location = new System.Drawing.Point(801, 57);
+            this.cboSecurityRole.Location = new System.Drawing.Point(801, 82);
             this.cboSecurityRole.Name = "cboSecurityRole";
             this.cboSecurityRole.Size = new System.Drawing.Size(244, 21);
             this.cboSecurityRole.TabIndex = 75;
@@ -3570,7 +3482,7 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Arial", 9F);
-            this.label15.Location = new System.Drawing.Point(639, 58);
+            this.label15.Location = new System.Drawing.Point(639, 82);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(157, 18);
@@ -3822,21 +3734,6 @@
             this.pnlAccClient.MouseEnter += new System.EventHandler(this.pnlAccClient_MouseEnter);
             this.pnlAccClient.MouseLeave += new System.EventHandler(this.pnlAccClient_MouseLeave);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(3, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(296, 415);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.label29_Click);
-            this.pictureBox3.MouseEnter += new System.EventHandler(this.pnlAccClient_MouseEnter);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pnlAccClient_MouseLeave);
-            // 
             // label103
             // 
             this.label103.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -3866,21 +3763,6 @@
             this.pnlAccAdv.MouseEnter += new System.EventHandler(this.pnlAccAdv_MouseEnter);
             this.pnlAccAdv.MouseLeave += new System.EventHandler(this.pnlAccAdv_MouseLeave);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(294, 415);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.lblAdvisorsClients_Click);
-            this.pictureBox1.MouseEnter += new System.EventHandler(this.pnlAccAdv_MouseEnter);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.pnlAccAdv_MouseLeave);
-            // 
             // label101
             // 
             this.label101.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -3909,21 +3791,6 @@
             this.pnlAccMgr.Click += new System.EventHandler(this.label33_Click);
             this.pnlAccMgr.MouseEnter += new System.EventHandler(this.pnlAccMgr_MouseEnter);
             this.pnlAccMgr.MouseLeave += new System.EventHandler(this.pnlAccMgr_MouseLeave);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(318, 415);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.label33_Click);
-            this.pictureBox2.MouseEnter += new System.EventHandler(this.pnlAccMgr_MouseEnter);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pnlAccMgr_MouseLeave);
             // 
             // label102
             // 
@@ -4239,6 +4106,157 @@
             this.tmrTaskNotification.Interval = 10000;
             this.tmrTaskNotification.Tick += new System.EventHandler(this.tmrTaskNotification_Tick);
             // 
+            // btnSaveAssetGroup
+            // 
+            this.btnSaveAssetGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveAssetGroup.BackColor = System.Drawing.Color.Transparent;
+            this.btnSaveAssetGroup.BackgroundImage = global::ISP.Properties.Resources.save;
+            this.btnSaveAssetGroup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSaveAssetGroup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveAssetGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveAssetGroup.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveAssetGroup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(218)))), ((int)(((byte)(219)))));
+            this.btnSaveAssetGroup.Location = new System.Drawing.Point(1020, 7);
+            this.btnSaveAssetGroup.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveAssetGroup.Name = "btnSaveAssetGroup";
+            this.btnSaveAssetGroup.Size = new System.Drawing.Size(26, 26);
+            this.btnSaveAssetGroup.TabIndex = 86;
+            this.btnSaveAssetGroup.UseVisualStyleBackColor = false;
+            this.btnSaveAssetGroup.Click += new System.EventHandler(this.btnSaveAssetGroup_Click);
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddUser.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddUser.BackgroundImage = global::ISP.Properties.Resources.plus;
+            this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddUser.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(218)))), ((int)(((byte)(219)))));
+            this.btnAddUser.Location = new System.Drawing.Point(562, 13);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(20, 20);
+            this.btnAddUser.TabIndex = 94;
+            this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            // 
+            // btnRemoveUser
+            // 
+            this.btnRemoveUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveUser.BackColor = System.Drawing.Color.Transparent;
+            this.btnRemoveUser.BackgroundImage = global::ISP.Properties.Resources.x;
+            this.btnRemoveUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRemoveUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoveUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveUser.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(218)))), ((int)(((byte)(219)))));
+            this.btnRemoveUser.Location = new System.Drawing.Point(587, 13);
+            this.btnRemoveUser.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRemoveUser.Name = "btnRemoveUser";
+            this.btnRemoveUser.Size = new System.Drawing.Size(20, 20);
+            this.btnRemoveUser.TabIndex = 95;
+            this.btnRemoveUser.UseVisualStyleBackColor = false;
+            this.btnRemoveUser.Click += new System.EventHandler(this.btnRemoveUser_Click);
+            // 
+            // btnSaveUserSecurity
+            // 
+            this.btnSaveUserSecurity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveUserSecurity.BackColor = System.Drawing.Color.Transparent;
+            this.btnSaveUserSecurity.BackgroundImage = global::ISP.Properties.Resources.save;
+            this.btnSaveUserSecurity.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSaveUserSecurity.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveUserSecurity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveUserSecurity.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveUserSecurity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(218)))), ((int)(((byte)(219)))));
+            this.btnSaveUserSecurity.Location = new System.Drawing.Point(1020, 7);
+            this.btnSaveUserSecurity.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveUserSecurity.Name = "btnSaveUserSecurity";
+            this.btnSaveUserSecurity.Size = new System.Drawing.Size(26, 26);
+            this.btnSaveUserSecurity.TabIndex = 86;
+            this.btnSaveUserSecurity.UseVisualStyleBackColor = false;
+            this.btnSaveUserSecurity.Click += new System.EventHandler(this.btnSaveUserSecurity_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(3, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(296, 415);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.label29_Click);
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.pnlAccClient_MouseEnter);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pnlAccClient_MouseLeave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(294, 415);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.lblAdvisorsClients_Click);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pnlAccAdv_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pnlAccAdv_MouseLeave);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(318, 415);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.label33_Click);
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.pnlAccMgr_MouseEnter);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pnlAccMgr_MouseLeave);
+            // 
+            // cboSettingsUsers
+            // 
+            this.cboSettingsUsers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboSettingsUsers.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cboSettingsUsers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSettingsUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboSettingsUsers.FormattingEnabled = true;
+            this.cboSettingsUsers.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.cboSettingsUsers.Location = new System.Drawing.Point(801, 57);
+            this.cboSettingsUsers.Name = "cboSettingsUsers";
+            this.cboSettingsUsers.Size = new System.Drawing.Size(244, 21);
+            this.cboSettingsUsers.TabIndex = 96;
+            // 
+            // ucClients
+            // 
+            this.ucClients.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucClients.Location = new System.Drawing.Point(0, 0);
+            this.ucClients.Name = "ucClients";
+            this.ucClients.Size = new System.Drawing.Size(1058, 439);
+            this.ucClients.TabIndex = 26;
+            // 
+            // ucSettings
+            // 
+            this.ucSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucSettings.Location = new System.Drawing.Point(1, 33);
+            this.ucSettings.Name = "ucSettings";
+            this.ucSettings.Size = new System.Drawing.Size(1058, 408);
+            this.ucSettings.TabIndex = 30;
+            // 
             // frmMain
             // 
             this.AllowDrop = true;
@@ -4367,11 +4385,8 @@
             this.tabAccounts.ResumeLayout(false);
             this.panel39.ResumeLayout(false);
             this.pnlAccClient.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnlAccAdv.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlAccMgr.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel42.ResumeLayout(false);
             this.panel42.PerformLayout();
             this.pnlAppStatus.ResumeLayout(false);
@@ -4379,6 +4394,9 @@
             this.pnlMainMnu.PerformLayout();
             this.pnlMainHeader.ResumeLayout(false);
             this.pnlMainHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -4637,5 +4655,6 @@
         private System.Windows.Forms.Button btnDgvTasksForward;
         private System.Windows.Forms.Button btnDgvTasksBack;
         private System.Windows.Forms.Label lblSelectedTask;
+        private System.Windows.Forms.ComboBox cboSettingsUsers;
 	}
 }
