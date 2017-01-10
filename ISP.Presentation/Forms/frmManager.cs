@@ -613,6 +613,16 @@ namespace ISP.Presentation.Forms
             else
                 cboPersonalAssets.Text = "";
 
+            if (relationalManagersFunds.StartDate != null)
+                txtFundStartDate.Text = ((DateTime)relationalManagersFunds.StartDate).ToString("MM/dd/yyyy");
+            else
+                txtFundStartDate.Text = "";
+
+            if (relationalManagersFunds.EndDate != null)
+                txtFundEndDate.Text = ((DateTime)relationalManagersFunds.EndDate).ToString("MM/dd/yyyy");
+            else
+                txtFundEndDate.Text = "";
+
             lblFundMgrSave.Visible = false;
         }
 
@@ -664,7 +674,7 @@ namespace ISP.Presentation.Forms
 
         private void btnFundMgrSave_Click(object sender, EventArgs e)
         {
-            if (relationalManagersFunds.RelationalManagerFundsId == null)
+            if (relationalManagersFunds.Id == null)
             {
                 MessageBox.Show("Error: No manager is selected. Please select a manager and try again.", "Error!", MessageBoxButtons.OK);
                 return;
@@ -690,8 +700,48 @@ namespace ISP.Presentation.Forms
                 relationalManagersFunds.ManagerRole = _stringMap;
             }
 
-            relationalManagersFunds.UpdateDatabaseRecord(frmMain_Parent.CurrentUser.UserId);
+            if (String.IsNullOrWhiteSpace(txtFundStartDate.Text))
+            {
+                relationalManagersFunds.StartDate = null;
+            }
+            else
+            {
+                try
+                {
+                    var date = DateTime.ParseExact(txtFundStartDate.Text, "MM/dd/yyyy", null);
+                    relationalManagersFunds.StartDate = date;
+                }
+                catch
+                {
+                    MessageBox.Show("Error: Cannot save. Start date is not in expected MM/dd/yyyy format.", "Error!", MessageBoxButtons.OK);
+                    return;
+                }
+            }
+
+            if (String.IsNullOrWhiteSpace(txtFundEndDate.Text))
+            {
+                relationalManagersFunds.EndDate = null;
+            }
+            else
+            {
+                try
+                {
+                    var date = DateTime.ParseExact(txtFundEndDate.Text, "MM/dd/yyyy", null);
+                    relationalManagersFunds.EndDate = date;
+                }
+                catch
+                {
+                    MessageBox.Show("Error: Cannot save. End date is not in expected MM/dd/yyyy format.", "Error!", MessageBoxButtons.OK);
+                    return;
+                }
+            }
+
+            relationalManagersFunds.SaveRecordToDatabase(frmMain_Parent.CurrentUser.UserId);
             lblFundMgrSave.Visible = true;
+
+            paginationFunds = new Pagination(dgvFunds, Fund.GetAssociatedFromManager((Guid)this.CurrentManager.Id));
+            dgvFunds.Columns[0].Visible = false;
+            dgvFunds.Columns[1].Visible = false;
         }
 
         private void btnFundDgvForward_Click(object sender, EventArgs e)

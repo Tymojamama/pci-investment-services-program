@@ -116,6 +116,10 @@
             this.lblHeader = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblFundStartDate = new System.Windows.Forms.Label();
+            this.txtFundStartDate = new System.Windows.Forms.RichTextBox();
+            this.txtFundEndDate = new System.Windows.Forms.RichTextBox();
+            this.lblFundEndDate = new System.Windows.Forms.Label();
             this.tabMain.SuspendLayout();
             this.tabSummary.SuspendLayout();
             this.pnlSummary.SuspendLayout();
@@ -231,7 +235,7 @@
             this.cboCredential.FormattingEnabled = true;
             this.cboCredential.Location = new System.Drawing.Point(135, 271);
             this.cboCredential.Name = "cboCredential";
-            this.cboCredential.Size = new System.Drawing.Size(785, 21);
+            this.cboCredential.Size = new System.Drawing.Size(768, 21);
             this.cboCredential.TabIndex = 6;
             // 
             // lstEducation
@@ -243,7 +247,7 @@
             this.lstEducation.FormattingEnabled = true;
             this.lstEducation.Location = new System.Drawing.Point(135, 424);
             this.lstEducation.Name = "lstEducation";
-            this.lstEducation.Size = new System.Drawing.Size(785, 80);
+            this.lstEducation.Size = new System.Drawing.Size(768, 80);
             this.lstEducation.TabIndex = 11;
             this.lstEducation.SelectedIndexChanged += new System.EventHandler(this.lstEducation_SelectedIndexChanged);
             // 
@@ -256,7 +260,7 @@
             this.lstCredentials.FormattingEnabled = true;
             this.lstCredentials.Location = new System.Drawing.Point(135, 215);
             this.lstCredentials.Name = "lstCredentials";
-            this.lstCredentials.Size = new System.Drawing.Size(785, 54);
+            this.lstCredentials.Size = new System.Drawing.Size(768, 54);
             this.lstCredentials.TabIndex = 5;
             // 
             // btnEduSave
@@ -265,7 +269,7 @@
             this.btnEduSave.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnEduSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEduSave.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEduSave.Location = new System.Drawing.Point(619, 595);
+            this.btnEduSave.Location = new System.Drawing.Point(602, 595);
             this.btnEduSave.Name = "btnEduSave";
             this.btnEduSave.Size = new System.Drawing.Size(96, 29);
             this.btnEduSave.TabIndex = 16;
@@ -279,7 +283,7 @@
             this.btnEduNew.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnEduNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEduNew.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEduNew.Location = new System.Drawing.Point(721, 595);
+            this.btnEduNew.Location = new System.Drawing.Point(704, 595);
             this.btnEduNew.Name = "btnEduNew";
             this.btnEduNew.Size = new System.Drawing.Size(96, 29);
             this.btnEduNew.TabIndex = 17;
@@ -293,7 +297,7 @@
             this.btnEduDelete.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnEduDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEduDelete.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEduDelete.Location = new System.Drawing.Point(823, 595);
+            this.btnEduDelete.Location = new System.Drawing.Point(806, 595);
             this.btnEduDelete.Name = "btnEduDelete";
             this.btnEduDelete.Size = new System.Drawing.Size(97, 29);
             this.btnEduDelete.TabIndex = 18;
@@ -307,7 +311,7 @@
             this.btnCredentialsNew.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnCredentialsNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCredentialsNew.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCredentialsNew.Location = new System.Drawing.Point(721, 298);
+            this.btnCredentialsNew.Location = new System.Drawing.Point(704, 298);
             this.btnCredentialsNew.Name = "btnCredentialsNew";
             this.btnCredentialsNew.Size = new System.Drawing.Size(96, 29);
             this.btnCredentialsNew.TabIndex = 7;
@@ -321,7 +325,7 @@
             this.btnCredentialsDelete.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnCredentialsDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCredentialsDelete.Font = new System.Drawing.Font("Gadugi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCredentialsDelete.Location = new System.Drawing.Point(823, 298);
+            this.btnCredentialsDelete.Location = new System.Drawing.Point(806, 298);
             this.btnCredentialsDelete.Name = "btnCredentialsDelete";
             this.btnCredentialsDelete.Size = new System.Drawing.Size(97, 29);
             this.btnCredentialsDelete.TabIndex = 8;
@@ -352,7 +356,7 @@
             this.txtLastName.Multiline = false;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtLastName.Size = new System.Drawing.Size(785, 19);
+            this.txtLastName.Size = new System.Drawing.Size(768, 19);
             this.txtLastName.TabIndex = 2;
             this.txtLastName.Text = "";
             this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
@@ -520,7 +524,7 @@
             this.txtYear.Multiline = false;
             this.txtYear.Name = "txtYear";
             this.txtYear.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtYear.Size = new System.Drawing.Size(709, 19);
+            this.txtYear.Size = new System.Drawing.Size(692, 19);
             this.txtYear.TabIndex = 15;
             this.txtYear.Text = "";
             this.txtYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDegree_KeyPress);
@@ -538,7 +542,7 @@
             this.txtEmphasis.Multiline = false;
             this.txtEmphasis.Name = "txtEmphasis";
             this.txtEmphasis.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtEmphasis.Size = new System.Drawing.Size(709, 19);
+            this.txtEmphasis.Size = new System.Drawing.Size(692, 19);
             this.txtEmphasis.TabIndex = 13;
             this.txtEmphasis.Text = "";
             this.txtEmphasis.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDegree_KeyPress);
@@ -556,7 +560,7 @@
             this.txtInstitution.Multiline = false;
             this.txtInstitution.Name = "txtInstitution";
             this.txtInstitution.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtInstitution.Size = new System.Drawing.Size(709, 19);
+            this.txtInstitution.Size = new System.Drawing.Size(692, 19);
             this.txtInstitution.TabIndex = 14;
             this.txtInstitution.Text = "";
             this.txtInstitution.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDegree_KeyPress);
@@ -574,7 +578,7 @@
             this.txtDegree.Multiline = false;
             this.txtDegree.Name = "txtDegree";
             this.txtDegree.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtDegree.Size = new System.Drawing.Size(709, 19);
+            this.txtDegree.Size = new System.Drawing.Size(692, 19);
             this.txtDegree.TabIndex = 12;
             this.txtDegree.Text = "";
             this.txtDegree.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDegree_KeyPress);
@@ -592,7 +596,7 @@
             this.txtBeganAsAnalyst.Multiline = false;
             this.txtBeganAsAnalyst.Name = "txtBeganAsAnalyst";
             this.txtBeganAsAnalyst.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtBeganAsAnalyst.Size = new System.Drawing.Size(768, 19);
+            this.txtBeganAsAnalyst.Size = new System.Drawing.Size(751, 19);
             this.txtBeganAsAnalyst.TabIndex = 10;
             this.txtBeganAsAnalyst.Text = "";
             // 
@@ -609,7 +613,7 @@
             this.txtBeganAsPm.Multiline = false;
             this.txtBeganAsPm.Name = "txtBeganAsPm";
             this.txtBeganAsPm.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtBeganAsPm.Size = new System.Drawing.Size(768, 19);
+            this.txtBeganAsPm.Size = new System.Drawing.Size(751, 19);
             this.txtBeganAsPm.TabIndex = 9;
             this.txtBeganAsPm.Text = "";
             // 
@@ -625,7 +629,7 @@
             this.txtResponsibilities.Margin = new System.Windows.Forms.Padding(2);
             this.txtResponsibilities.Name = "txtResponsibilities";
             this.txtResponsibilities.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtResponsibilities.Size = new System.Drawing.Size(785, 57);
+            this.txtResponsibilities.Size = new System.Drawing.Size(768, 57);
             this.txtResponsibilities.TabIndex = 4;
             this.txtResponsibilities.Text = "";
             // 
@@ -641,7 +645,7 @@
             this.txtBiography.Margin = new System.Windows.Forms.Padding(2);
             this.txtBiography.Name = "txtBiography";
             this.txtBiography.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtBiography.Size = new System.Drawing.Size(785, 57);
+            this.txtBiography.Size = new System.Drawing.Size(768, 57);
             this.txtBiography.TabIndex = 3;
             this.txtBiography.Text = "";
             // 
@@ -658,7 +662,7 @@
             this.txtFirstName.Multiline = false;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtFirstName.Size = new System.Drawing.Size(785, 19);
+            this.txtFirstName.Size = new System.Drawing.Size(768, 19);
             this.txtFirstName.TabIndex = 0;
             this.txtFirstName.Text = "";
             this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
@@ -676,7 +680,7 @@
             this.txtMiddleName.Multiline = false;
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtMiddleName.Size = new System.Drawing.Size(785, 19);
+            this.txtMiddleName.Size = new System.Drawing.Size(768, 19);
             this.txtMiddleName.TabIndex = 1;
             this.txtMiddleName.Text = "";
             this.txtMiddleName.TextChanged += new System.EventHandler(this.txtMiddleName_TextChanged);
@@ -947,6 +951,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txtFundEndDate);
+            this.panel3.Controls.Add(this.lblFundEndDate);
+            this.panel3.Controls.Add(this.txtFundStartDate);
+            this.panel3.Controls.Add(this.lblFundStartDate);
             this.panel3.Controls.Add(this.cboPersonalAssets);
             this.panel3.Controls.Add(this.cboFundRole);
             this.panel3.Controls.Add(this.lblFundMgrSave);
@@ -992,7 +1000,7 @@
             this.lblFundMgrSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFundMgrSave.AutoSize = true;
             this.lblFundMgrSave.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFundMgrSave.Location = new System.Drawing.Point(710, 107);
+            this.lblFundMgrSave.Location = new System.Drawing.Point(712, 148);
             this.lblFundMgrSave.Name = "lblFundMgrSave";
             this.lblFundMgrSave.Size = new System.Drawing.Size(163, 16);
             this.lblFundMgrSave.TabIndex = 82;
@@ -1072,7 +1080,7 @@
             this.btnFundMgrSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFundMgrSave.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFundMgrSave.ForeColor = System.Drawing.Color.Black;
-            this.btnFundMgrSave.Location = new System.Drawing.Point(878, 101);
+            this.btnFundMgrSave.Location = new System.Drawing.Point(880, 142);
             this.btnFundMgrSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnFundMgrSave.Name = "btnFundMgrSave";
             this.btnFundMgrSave.Size = new System.Drawing.Size(78, 29);
@@ -1328,15 +1336,71 @@
             this.pnlHeader.TabIndex = 62;
             this.pnlHeader.DoubleClick += new System.EventHandler(this.MaximizeForm);
             // 
+            // lblFundStartDate
+            // 
+            this.lblFundStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFundStartDate.AutoSize = true;
+            this.lblFundStartDate.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFundStartDate.Location = new System.Drawing.Point(603, 96);
+            this.lblFundStartDate.Name = "lblFundStartDate";
+            this.lblFundStartDate.Size = new System.Drawing.Size(66, 16);
+            this.lblFundStartDate.TabIndex = 84;
+            this.lblFundStartDate.Text = "Start Date";
+            // 
+            // txtFundStartDate
+            // 
+            this.txtFundStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFundStartDate.BackColor = System.Drawing.SystemColors.Window;
+            this.txtFundStartDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFundStartDate.Font = new System.Drawing.Font("Arial", 8F);
+            this.txtFundStartDate.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtFundStartDate.Location = new System.Drawing.Point(780, 97);
+            this.txtFundStartDate.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFundStartDate.Multiline = false;
+            this.txtFundStartDate.Name = "txtFundStartDate";
+            this.txtFundStartDate.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.txtFundStartDate.Size = new System.Drawing.Size(176, 19);
+            this.txtFundStartDate.TabIndex = 85;
+            this.txtFundStartDate.Text = "";
+            // 
+            // txtFundEndDate
+            // 
+            this.txtFundEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFundEndDate.BackColor = System.Drawing.SystemColors.Window;
+            this.txtFundEndDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFundEndDate.Font = new System.Drawing.Font("Arial", 8F);
+            this.txtFundEndDate.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtFundEndDate.Location = new System.Drawing.Point(780, 118);
+            this.txtFundEndDate.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFundEndDate.Multiline = false;
+            this.txtFundEndDate.Name = "txtFundEndDate";
+            this.txtFundEndDate.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.txtFundEndDate.Size = new System.Drawing.Size(176, 19);
+            this.txtFundEndDate.TabIndex = 87;
+            this.txtFundEndDate.Text = "";
+            // 
+            // lblFundEndDate
+            // 
+            this.lblFundEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFundEndDate.AutoSize = true;
+            this.lblFundEndDate.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFundEndDate.Location = new System.Drawing.Point(603, 117);
+            this.lblFundEndDate.Name = "lblFundEndDate";
+            this.lblFundEndDate.Size = new System.Drawing.Size(61, 16);
+            this.lblFundEndDate.TabIndex = 86;
+            this.lblFundEndDate.Text = "End Date";
+            // 
             // frmManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 612);
-            this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlFormHeader);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel11);
+            this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.tabMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManager";
@@ -1450,6 +1514,10 @@
         private System.Windows.Forms.Label lblFundMgrSave;
         private System.Windows.Forms.ComboBox cboPersonalAssets;
         private System.Windows.Forms.ToolTip toolTip1;
+        public System.Windows.Forms.RichTextBox txtFundEndDate;
+        private System.Windows.Forms.Label lblFundEndDate;
+        public System.Windows.Forms.RichTextBox txtFundStartDate;
+        private System.Windows.Forms.Label lblFundStartDate;
         //public System.Windows.Forms.RichTextBox txtName;
     }
 }
