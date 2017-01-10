@@ -8,71 +8,61 @@ using System.Data.SqlClient;
 
 namespace ISP.Business.Entities
 {
-    public class Relational_Managers_Funds
+    public class Relational_Managers_Funds : DatabaseEntity
     {
-        public Guid RelationalManagerFundsId;
-        public DateTime StartDate;
-        public DateTime EndDate;
+        public DateTime? StartDate;
+        public DateTime? EndDate;
+        public decimal? ManagerTenure;
+        public Guid? ManagerRoleId;
+        public Guid? PersonalAssetsId;
+
         public StringMap ManagerRole = null;
         public StringMap PersonalAssets = null;
-        public decimal? ManagerTenure;
-        
-        public Relational_Managers_Funds(Guid relationalManagerFundsId)
-        {
-            RelationalManagerFundsId = relationalManagerFundsId;
-            DataRow dr = GetDetails(RelationalManagerFundsId).Rows[0];
-            DateTime.TryParse(dr["StartDate"].ToString(), out StartDate);
-            DateTime.TryParse(dr["EndDate"].ToString(), out EndDate);
-            
-            if (!String.IsNullOrEmpty(dr["ManagerRoleId"].ToString()))
-            {
-                Guid stringMapId = new Guid(dr["ManagerRoleId"].ToString());
-                ManagerRole = new StringMap(stringMapId);
-            }
 
-            if (!String.IsNullOrEmpty(dr["PersonalAssetsId"].ToString()))
-            {
-                Guid stringMapId = new Guid(dr["PersonalAssetsId"].ToString());
-                PersonalAssets = new StringMap(stringMapId);
-            }
-  
-            try
-            {
-                ManagerTenure = Decimal.Parse(dr["ManagerTenure"].ToString());
-            }
-            catch
-            {
-                ManagerTenure = null;
-            }
+        private static string _tableName = "Relational_Managers_Funds";
+
+        /// <summary>
+        /// Creates an instance of a Relational_Managers_Funds record that does not exist in the database.
+        /// </summary>
+        public Relational_Managers_Funds()
+            : base(_tableName)
+        {
+
         }
 
-        private static DataTable GetDetails(Guid relationalManagerFundsId)
+        /// <summary>
+        /// Creates an instance of an existing Relational_Managers_Funds in the database.
+        /// </summary>
+        /// <param name="primaryKey">Used to get the Relational_Managers_Funds database record.</param>
+        public Relational_Managers_Funds(Guid primaryKey)
+            : base(_tableName, primaryKey)
         {
-            Hashtable parameterList = new Hashtable();
-            parameterList.Add("@Relational_Manager_FundsId", relationalManagerFundsId);
-            return Access.IspDbAccess.ExecuteStoredProcedureQuery("[dbo].[usp_ISP_Relational_Managers_FundsGetDetails]", parameterList);
+            RefreshMembers();
         }
 
-        public Int32 UpdateDatabaseRecord(Guid UserId)
+        /// <summary>
+        /// Registers the instance's members with the abstract class in order to perform database operations. Do not register members
+        /// that exist within the abstract class (e.g. CreatedOn).
+        /// </summary>
+        protected override void RegisterMembers()
         {
-            if (this.RelationalManagerFundsId == null)
-                throw new Exception("Object must have a RelationalManagerFundsId");
+            base.AddColumn("StartDate", this.StartDate);
+            base.AddColumn("EndDate", this.EndDate);
+            base.AddColumn("ManagerTenure", this.ManagerTenure);
+            base.AddColumn("ManagerRoleId", this.ManagerRoleId);
+            base.AddColumn("PersonalAssetsId", this.PersonalAssetsId);
+        }
 
-            Hashtable parameterList = new Hashtable();
-            parameterList.Add("@Relational_Manager_FundsId", this.RelationalManagerFundsId);
-            parameterList.Add("@UserId", UserId);
-
-            if (this.ManagerRole == null)
-                NullHandler.Parameter(parameterList, "@ManagerRoleId", null);
-            else
-                NullHandler.Parameter(parameterList, "@ManagerRoleId", this.ManagerRole.Id);
-
-            if (this.PersonalAssets == null)
-                NullHandler.Parameter(parameterList, "@PersonalAssetsId", null);
-            else
-                NullHandler.Parameter(parameterList, "@PersonalAssetsId", this.PersonalAssets.Id);
-
-            return Access.IspDbAccess.ExecuteStoredProcedureNonQuery("[dbo].[usp_ISP_Relational_Managers_FundsUpdate]", parameterList);
+        /// <summary>
+        /// Resets the values of all public members to their values in the database.
+        /// </summary>
+        protected override void SetRegisteredMembers()
+        {
+            this.StartDate = (DateTime?)base.GetColumn("StartDate");
+            this.EndDate = (DateTime?)base.GetColumn("EndDate");
+            this.ManagerTenure = (Decimal?)base.GetColumn("ManagerTenure");
+            this.ManagerRoleId = (Guid?)base.GetColumn("ManagerRoleId");
+            this.PersonalAssetsId = (Guid?)base.GetColumn("PersonalAssetsId");
         }
     }
 }
