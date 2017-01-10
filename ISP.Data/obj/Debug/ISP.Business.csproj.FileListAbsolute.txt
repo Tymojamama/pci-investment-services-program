@@ -1,7 +1,0 @@
-C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Data\bin\Debug\ISP.Data.dll
-C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Data\bin\Debug\ISP.Data.pdb
-C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Data\bin\Debug\PensionConsultants.Data.dll
-C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Data\bin\Debug\PensionConsultants.Data.pdb
-C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Data\obj\Debug\ISP.Business.csprojResolveAssemblyReference.cache
-C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Data\obj\Debug\ISP.Data.dll
-C:\Users\zallen\Documents\Local Git Repository\ISP\ISP.Data\obj\Debug\ISP.Data.pdb
