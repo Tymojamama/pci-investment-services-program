@@ -603,13 +603,19 @@ namespace ISP.Presentation.Forms
 
             relationalManagersFunds = new Relational_Managers_Funds(relationalManagersFundsId);
 
-            if (relationalManagersFunds.ManagerRole != null)
-                cboFundRole.Text = relationalManagersFunds.ManagerRole.Value;
+            if (relationalManagersFunds.ManagerRoleId != null)
+            {
+                var stringMap = new StringMap((Guid)relationalManagersFunds.ManagerRoleId);
+                cboFundRole.Text = stringMap.Value;
+            }
             else
                 cboFundRole.Text = "";
 
-            if (relationalManagersFunds.PersonalAssets != null)
-                cboPersonalAssets.Text = relationalManagersFunds.PersonalAssets.Value;
+            if (relationalManagersFunds.PersonalAssetsId != null)
+            {
+                var stringMap = new StringMap((Guid)relationalManagersFunds.PersonalAssetsId);
+                cboPersonalAssets.Text = stringMap.Value;
+            }
             else
                 cboPersonalAssets.Text = "";
 
@@ -682,22 +688,22 @@ namespace ISP.Presentation.Forms
 
             if (cboPersonalAssets.SelectedItem == null || String.IsNullOrEmpty(((Utilities.ListItem)cboPersonalAssets.SelectedItem).ToString()))
             {
-                relationalManagersFunds.PersonalAssets = null;
+                relationalManagersFunds.PersonalAssetsId = null;
             }
             else
             {
                 StringMap _stringMap = (StringMap)((ListItem)cboPersonalAssets.SelectedItem).HiddenObject;
-                relationalManagersFunds.PersonalAssets = _stringMap;
+                relationalManagersFunds.PersonalAssetsId = _stringMap.Id;
             }
 
             if (cboFundRole.SelectedItem == null || String.IsNullOrEmpty(((ListItem)cboFundRole.SelectedItem).ToString()))
             {
-                relationalManagersFunds.ManagerRole = null;
+                relationalManagersFunds.ManagerRoleId = null;
             }
             else
             {
                 StringMap _stringMap = (StringMap)((ListItem)cboFundRole.SelectedItem).HiddenObject;
-                relationalManagersFunds.ManagerRole = _stringMap;
+                relationalManagersFunds.ManagerRoleId = _stringMap.Id;
             }
 
             if (String.IsNullOrWhiteSpace(txtFundStartDate.Text))
@@ -737,11 +743,12 @@ namespace ISP.Presentation.Forms
             }
 
             relationalManagersFunds.SaveRecordToDatabase(frmMain_Parent.CurrentUser.UserId);
-            lblFundMgrSave.Visible = true;
 
             paginationFunds = new Pagination(dgvFunds, Fund.GetAssociatedFromManager((Guid)this.CurrentManager.Id));
             dgvFunds.Columns[0].Visible = false;
             dgvFunds.Columns[1].Visible = false;
+
+            lblFundMgrSave.Visible = true;
         }
 
         private void btnFundDgvForward_Click(object sender, EventArgs e)
