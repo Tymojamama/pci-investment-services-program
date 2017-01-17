@@ -16,9 +16,6 @@ namespace ISP.Business.Entities
         public Guid? ManagerRoleId;
         public Guid? PersonalAssetsId;
 
-        public StringMap ManagerRole = null;
-        public StringMap PersonalAssets = null;
-
         private static string _tableName = "Relational_Managers_Funds";
 
         /// <summary>
