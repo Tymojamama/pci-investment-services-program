@@ -1066,7 +1066,7 @@ namespace ISP.Presentation.Forms
             string planName = cboSelectedPlan.Text;
             string fundName = dgvFunds.Rows[index].Cells[3].Value.ToString();
 
-            DialogResult result = MessageBox.Show("Are you sure you wish to remove " + fundName + " from " + planName + "?", "Attention", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Are you sure you wish to delete " + fundName + " from " + planName + "? This action cannot be undone!", "Attention", MessageBoxButtons.YesNo);
 
             if (result == DialogResult.Yes)
             {
@@ -1074,8 +1074,7 @@ namespace ISP.Presentation.Forms
                 Guid userId = frmMain_Parent.CurrentUser.UserId;
 
                 CurrentRelational_Funds_Plans = new Relational_Funds_Plans(relational_Funds_PlansId);
-                CurrentRelational_Funds_Plans.SetRecordInactive();
-                CurrentRelational_Funds_Plans.SaveRecordToDatabase(userId);
+                CurrentRelational_Funds_Plans.DeleteRecordFromDatabase();
             }
 
             LoadFundsDgv();

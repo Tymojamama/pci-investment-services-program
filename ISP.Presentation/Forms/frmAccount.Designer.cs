@@ -17,7 +17,7 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAccount));
             this.tabControlClientDetail = new System.Windows.Forms.TabControl();
             this.tabClientSummary = new System.Windows.Forms.TabPage();
@@ -1027,7 +1027,7 @@
             this.label18.TabIndex = 78;
             this.label18.Text = "Primary Benchmark:";
             // 
-            // label14
+            // lblBenchmarkPrimary
             // 
             this.lblBenchmarkPrimary.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1037,7 +1037,7 @@
             this.lblBenchmarkPrimary.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lblBenchmarkPrimary.Location = new System.Drawing.Point(172, 26);
             this.lblBenchmarkPrimary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBenchmarkPrimary.Name = "label14";
+            this.lblBenchmarkPrimary.Name = "lblBenchmarkPrimary";
             this.lblBenchmarkPrimary.Size = new System.Drawing.Size(212, 22);
             this.lblBenchmarkPrimary.TabIndex = 77;
             this.lblBenchmarkPrimary.Text = "Select a fund...";
@@ -1485,14 +1485,14 @@
             this.dgvFunds.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvFunds.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvFunds.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFunds.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFunds.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFunds.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvFunds.EnableHeadersVisualStyles = false;
             this.dgvFunds.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
