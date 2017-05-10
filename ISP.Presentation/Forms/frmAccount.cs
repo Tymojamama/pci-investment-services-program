@@ -916,7 +916,7 @@ namespace ISP.Presentation.Forms
                 CurrentPlanDetail = new PlanDetail(planId);
 
                 if (CurrentPlanDetail.ExpenseRatio != null)
-                    txtExpenseRatio.Text = ((decimal)CurrentPlanDetail.ExpenseRatio).ToString("#.##");
+                    txtExpenseRatio.Text = ((decimal)CurrentPlanDetail.ExpenseRatio).ToString("#.####");
                 else
                     txtExpenseRatio.Text = String.Empty;
 
